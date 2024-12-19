@@ -1,16 +1,4 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background-color: #000;
-}
-
-header {
-    background: url('header-bg.jpg') no-repeat center center/cover;
-    padding: 20px 0;
-    text-align: center;
-}
-
+/* Default Navigation Layout (horizontal on larger screens) */
 nav {
     display: flex;
     justify-content: space-between;
@@ -18,240 +6,38 @@ nav {
     padding: 0 50px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
+/* Navigation Link Style */
 .nav-links a {
     color: #fff;
     text-decoration: none;
 }
 
-.hero {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #000;
-    background-color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #ddd;
-}
-
-.services {
-    background-color: #111;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 28px;
-    margin-bottom: 40px;
-}
-
-.service-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensure wrapping for smaller screens */
-}
-
-.service-card {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.service-card .btn {
-    background-color: #00f;
-    color: #fff;
-}
-
-.service-card .btn:hover {
-    background-color: #008;
-}
-
-/* Testimonials Section */
-.testimonials {
-    background-color: #111;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.testimonials h2 {
-    color: #00f;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.testimonials h3 {
-    font-size: 28px;
-    margin-bottom: 40px;
-}
-
-.testimonial-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping */
-}
-
-.testimonial-card {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.testimonial-card h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.stars {
-    font-size: 18px;
-    color: #ffd700;
-    margin-bottom: 10px;
-}
-
-.testimonial-card p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For devices smaller than 768px */
+/* Mobile View: Stack Navigation Links Vertically */
 @media (max-width: 768px) {
-    /* Add a background color for testing */
-    body {
-        background-color: #111;
-    }
-
     nav {
-        flex-direction: column;
+        flex-direction: column;  /* Stack navigation items vertically */
         padding: 10px;
         text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;  /* Ensure the links stack */
+        gap: 10px;
+        align-items: center;     /* Center the links */
     }
 
     .logo {
         font-size: 20px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .services h2 {
-        font-size: 24px;
-    }
-
-    .service-cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .testimonial-cards {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* Force all cards to have 100% width on small screens */
-    .testimonial-card, .service-card {
-        width: 100%;
-        max-width: 350px;
-        margin-bottom: 20px; /* Added margin for spacing */
-    }
-}
-
-/* For devices smaller than 480px */
-@media (max-width: 480px) {
-    body {
-        background-color: #222;
-    }
-
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    .services h2 {
-        font-size: 22px;
-    }
-
-    .service-card h3 {
-        font-size: 20px;
-    }
-
-    .testimonial-card h4 {
-        font-size: 18px;
-    }
-
-    .stars {
-        font-size: 16px;
-    }
-
-    .btn {
-        font-size: 14px;
-    }
-
-    /* Force cards to be 100% width on mobile */
-    .testimonial-card, .service-card {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 0;
+    .nav-links a {
+        font-size: 18px;  /* Increase font size for readability */
     }
 }
