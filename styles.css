@@ -79,6 +79,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .service-card {
@@ -87,6 +88,7 @@ nav {
     border-radius: 10px;
     width: 300px;
     text-align: left;
+    margin-bottom: 20px; /* Add margin for spacing */
 }
 
 .service-card h3 {
@@ -107,7 +109,6 @@ nav {
 .service-card .btn:hover {
     background-color: #008;
 }
-
 
 /* Testimonials Section */
 .testimonials {
@@ -131,6 +132,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .testimonial-card {
@@ -139,6 +141,7 @@ nav {
     border-radius: 10px;
     width: 300px;
     text-align: left;
+    margin-bottom: 20px; /* Add margin for spacing */
 }
 
 .testimonial-card h4 {
@@ -165,6 +168,7 @@ nav {
     nav {
         flex-direction: column;
         padding: 10px;
+        text-align: center;
     }
 
     .logo {
@@ -174,7 +178,6 @@ nav {
     .nav-links {
         flex-direction: column;
         gap: 10px;
-        text-align: center;
     }
 
     .hero h1 {
@@ -202,6 +205,7 @@ nav {
     .testimonial-card, .service-card {
         width: 100%;
         max-width: 350px;
+        margin-bottom: 20px; /* Added margin for spacing */
     }
 }
 
