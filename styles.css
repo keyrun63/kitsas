@@ -1,9 +1,28 @@
-/* Default Navigation Layout (horizontal on larger screens) */
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+header {
+    background: url('header-bg.jpg') no-repeat center center/cover;
+    padding: 20px 0;
+    text-align: center;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+}
+
+/* Logo Style */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /* Navigation Links */
@@ -19,25 +38,6 @@ nav {
     text-decoration: none;
 }
 
-/* Mobile View: Stack Navigation Links Vertically */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;  /* Stack navigation items vertically */
-        padding: 10px;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;  /* Ensure the links stack */
-        gap: 10px;
-        align-items: center;     /* Center the links */
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .nav-links a {
-        font-size: 18px;  /* Increase font size for readability */
-    }
-}
+/* Hero Section */
+.hero {
+  
