@@ -79,7 +79,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; /* Ensure wrapping for smaller screens */
 }
 
 .service-card {
@@ -88,7 +88,7 @@ nav {
     border-radius: 10px;
     width: 300px;
     text-align: left;
-    margin-bottom: 20px; /* Add margin for spacing */
+    margin-bottom: 20px;
 }
 
 .service-card h3 {
@@ -132,7 +132,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 .testimonial-card {
@@ -141,7 +141,7 @@ nav {
     border-radius: 10px;
     width: 300px;
     text-align: left;
-    margin-bottom: 20px; /* Add margin for spacing */
+    margin-bottom: 20px;
 }
 
 .testimonial-card h4 {
@@ -160,11 +160,15 @@ nav {
     margin-bottom: 20px;
 }
 
-
 /* Media Queries for Responsiveness */
 
 /* For devices smaller than 768px */
 @media (max-width: 768px) {
+    /* Add a background color for testing */
+    body {
+        background-color: #111;
+    }
+
     nav {
         flex-direction: column;
         padding: 10px;
@@ -202,6 +206,7 @@ nav {
         gap: 20px;
     }
 
+    /* Force all cards to have 100% width on small screens */
     .testimonial-card, .service-card {
         width: 100%;
         max-width: 350px;
@@ -211,6 +216,10 @@ nav {
 
 /* For devices smaller than 480px */
 @media (max-width: 480px) {
+    body {
+        background-color: #222;
+    }
+
     .hero h1 {
         font-size: 24px;
     }
@@ -237,5 +246,12 @@ nav {
 
     .btn {
         font-size: 14px;
+    }
+
+    /* Force cards to be 100% width on mobile */
+    .testimonial-card, .service-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
     }
 }
